@@ -1,0 +1,18 @@
+<% if @fields_unfilled %>
+<div class="alert">
+  Please fill all the form fields
+</div>
+<% end %>
+
+<%= form_tag do %>
+  <%= label_tag :uid %>
+  <%= text_field_tag :uid, params[:uid] %>
+
+  <%= label_tag :pub0 %>
+  <%= text_field_tag :pub0, params[:pub0] %>
+
+  <%= label_tag :page %>
+  <%= text_field_tag :page, params[:page] %>
+
+  <%= submit_tag 'Fetch offers' %>
+<% end %>
