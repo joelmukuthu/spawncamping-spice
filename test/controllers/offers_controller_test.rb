@@ -11,9 +11,14 @@ class OffersControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get form validation error if all form fields are not filled in" do
+  test "should get form validation error if no fields are filled in" do
     post :index
-    assert_equal 'Please fill all the form fields', flash[:alert]
+    assert_equal 'Please fill in the fields marked with an asterisk (*)', flash[:alert]
+  end
+
+  test "should get form validation error if required fields are not filled in" do
+    post :index, { uid: '', pub0: 'campaign2', page: 1 }
+    assert_equal 'Please fill in the fields marked with an asterisk (*)', flash[:alert]
   end
 
   test "should handle incorrect page param gracefully" do

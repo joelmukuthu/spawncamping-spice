@@ -5,8 +5,8 @@ class OffersController < ApplicationController
   def index
     @offers = []
     if request.post?
-      if params[:uid].blank? || params[:pub0].blank? || params[:page].blank?
-        flash[:alert] = "Please fill all the form fields"
+      if params[:uid].blank? || params[:page].blank?
+        flash[:alert] = "Please fill in the fields marked with an asterisk (*)"
       else
         begin
           flash.clear

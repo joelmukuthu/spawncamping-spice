@@ -1,11 +1,11 @@
 <%= form_tag root_path, role: 'form' do %>
-  <%= label_tag :uid %>
+  <%= label_tag :uid, 'Uid *' %>
   <%= text_field_tag :uid, params[:uid] %>
 
   <%= label_tag :pub0 %>
   <%= text_field_tag :pub0, params[:pub0] %>
 
-  <%= label_tag :page %>
+  <%= label_tag :page, 'Page *' %>
   <%= text_field_tag :page, params[:page] %>
 
   <%= submit_tag 'Fetch offers' %>

@@ -17,7 +17,7 @@
       </div>
       <%= render partial: 'offer', collection: @offers %>
     </div>
-  <% elsif request.post? && flash.none? %>
+  <% elsif request.post? && flash.empty? %>
     <div class="no_offers">
       No offers
     </div>
