@@ -5,7 +5,9 @@
 <%= render 'form' %>
 
 <% if @offers.any? %>
-  <%= render partial: 'offer', collection: @offers %>
+  <div class="offers">
+    <%= render partial: 'offer', collection: @offers %>
+  </div>
 <% else %>
   <div class="no_offers">
     No offers
