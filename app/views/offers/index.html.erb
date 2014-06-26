@@ -1,21 +1,13 @@
 <h1>Offers</h1>
 
-<% if defined? @api_error %>
-<div class="alert">
-  An API error occurred: <%= @api_error %>
-</div>
-<% end %>
+<%= render 'layouts/flash' %>
 
 <%= render 'form' %>
 
 <% if @offers.any? %>
-
-<%= render partial: 'offer', collection: @offers %>
-
+  <%= render partial: 'offer', collection: @offers %>
 <% else %>
-
-<div class="no_offers">
-  No offers
-</div>
-
+  <div class="no_offers">
+    No offers
+  </div>
 <% end %>

@@ -1,9 +1,3 @@
-<% if @fields_unfilled %>
-<div class="alert">
-  Please fill all the form fields
-</div>
-<% end %>
-
 <%= form_tag do %>
   <%= label_tag :uid %>
   <%= text_field_tag :uid, params[:uid] %>
