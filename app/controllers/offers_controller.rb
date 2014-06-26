@@ -9,6 +9,7 @@ class OffersController < ApplicationController
         flash[:alert] = "Please fill all the form fields"
       else
         begin
+          flash.clear
           # TODO: use a dropdown for page param? can be updated according to the 'pages' param returned by api..
           page = params[:page].to_i
           params[:page] = page < 1 ? 1 : page

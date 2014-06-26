@@ -1,15 +1,25 @@
-<h1>Offers</h1>
-
-<%= render 'layouts/flash' %>
-
-<%= render 'form' %>
-
-<% if @offers.any? %>
-  <div class="offers">
-    <%= render partial: 'offer', collection: @offers %>
-  </div>
-<% else %>
-  <div class="no_offers">
-    No offers
-  </div>
-<% end %>
+<div class="wrap">
+  <h1>SponsorPay Mobile Offers API - Ruby Developer Challenge</h1>
+  <%= render 'layouts/flash' %>
+  <%= render 'form' %>
+  <% if @offers.any? %>
+    <div class="alert alert-notice">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <ul>
+          <li><%= @offers.size %> offers returned</li>
+        </ul>
+    </div>
+    <div class="offers">
+      <div class="offer headers"> 
+        <div>Offer title</div> 
+        <div>Offer payout</div> 
+        <div>Offer thumbnail</div> 
+      </div>
+      <%= render partial: 'offer', collection: @offers %>
+    </div>
+  <% elsif request.post? && flash.none? %>
+    <div class="no_offers">
+      No offers
+    </div>
+  <% end %>
+</div>

@@ -1,3 +1,8 @@
 <% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, class: name %>
+  <div class="alert alert-<%= name %>">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <ul>
+        <li><%= msg %></li>
+      </ul>
+  </div>
 <% end %>
