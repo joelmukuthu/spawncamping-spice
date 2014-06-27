@@ -45,7 +45,7 @@ class SpApi
       end
 
       def create_hashkey params
-        q = URI.encode_www_form params.sort
+        q = create_query_string params.sort
         q += "&#{api_key}"
         Digest::SHA1.hexdigest q
       end
