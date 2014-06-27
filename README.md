@@ -1,6 +1,6 @@
 ## SponsorPay Mobile Offers API - Ruby Developer Challenge
 
-Simple rails 4 app that fetches and displays offers using [SponsorPay's Mobile Offers API](http://developer.sponsorpay.com/content/ios/offer-wall/offer-api/).
+Sample rails 4 app that fetches and displays offers using [SponsorPay's Mobile Offers API](http://developer.sponsorpay.com/content/ios/offer-wall/offer-api/).
 
 ### Ruby version
 
